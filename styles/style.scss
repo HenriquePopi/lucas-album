@@ -1,0 +1,33 @@
+// @import "header.scss";
+// @import "section1.scss";
+// @import "listen-now.scss";
+// @import "tracklist.scss";
+@import "vars.scss";
+@import "s1.scss";
+@import "buttons-menu.scss";
+
+* {
+  font-family: Source Code Pro;
+  margin: 0;
+  padding: 0;
+
+  &::after {
+    margin: 0;
+    padding: 0;
+  }
+  &::before {
+    margin: 0;
+    padding: 0;
+  }
+}
+img {
+  display: block;
+}
+li {
+  list-style-type: none;
+}
+
+.subtitulo {
+  font-size: 5rem;
+  color: $textColor2;
+}

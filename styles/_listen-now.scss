@@ -1,0 +1,58 @@
+.listen-now {
+  position: relative;
+  overflow: hidden;
+  height: 6rem;
+  width: fit-content;
+  position: absolute;
+  z-index: 100;
+  iframe {
+    margin-top: -0.5rem;
+    display: none;
+  }
+  &:hover {
+    transform: rotate(360deg);
+    transition: 600ms;
+  }
+  &:hover iframe {
+    display: block;
+  }
+  &:hover :is(h1, h2) {
+    display: none;
+  }
+  &:is(h1, h2) {
+    transform: rotate(360deg);
+    transition: 600ms;
+  }
+  h1 {
+    color: black;
+    padding-left: 0.3rem;
+    font-size: 2.3rem;
+    line-height: 2rem;
+    letter-spacing: 0.6rem;
+    display: table;
+    z-index: 0;
+    background: none;
+    width: fit-content;
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+  h2 {
+    background: transparent;
+    color: black;
+    font-size: 5rem;
+    display: table;
+    line-height: 4rem;
+    width: fit-content;
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+}
+
+// <div class="listen-now">
+// <div>
+//   <h1>Listen</h1>
+//   <h2>Now</h2>
+// </div>
+// <iframe class="music" width=" 200" height="130" scrolling="no" frameborder="yes" allow="autoplay"
+//   src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1081467340%3Fsecret_token%3Ds-YlmxyjLY1MQ&color=%23f8d483&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+// </div>

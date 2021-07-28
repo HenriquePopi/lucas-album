@@ -1,0 +1,38 @@
+@import url("vars.css");
+.tracklist {
+  li {
+    color: black;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    position: relative;
+    z-index: 200;
+    cursor: pointer;
+    transform-origin: right;
+    transition: transform 250ms;
+    overflow: hidden;
+    //  @include bgClipText("../assets/yellow-bg.png");
+  }
+  li:hover {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  li::after {
+    content: "Nome_Legal_aqui";
+    display: inline-block;
+    color: transparent;
+    @include bgClipText("../assets/madeira2.png");
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 0;
+    transform-origin: right;
+    transition: transform 250ms;
+    // background: blue;
+  }
+  li:hover::after {
+    transform-origin: left;
+    transition: 0.6s linear;
+    width: 100%;
+  }
+}

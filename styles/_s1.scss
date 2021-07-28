@@ -1,0 +1,54 @@
+// #fp-nav {
+// ul {
+//   display: flex;
+// }
+// position: absolute;
+// margin-top: 50px;
+// top: 0;
+// }
+
+.section.s1 {
+  .album-name {
+    grid-row: 2;
+    grid-column: 3/7;
+    font-size: 3rem;
+  }
+  .capa {
+    max-width: 60%;
+    grid-column: 1/-1;
+    grid-row: 3/8;
+    margin: 0 auto;
+  }
+  @media (max-width: 720px) {
+    .album-name {
+      font-size: 2rem;
+      grid-row: 10;
+      grid-column: 2/-1;
+    }
+    .capa {
+      max-width: 70%;
+      grid-row: 7;
+    }
+  }
+}
+
+.tracklist {
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 1%;
+  top: 10%;
+  li {
+    cursor: pointer;
+    align-self: flex-end;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    &:nth-child(2):hover {
+      color: #aaaaff;
+    }
+    &:nth-child(3):hover {
+      color: #f4c409;
+    }
+  }
+}

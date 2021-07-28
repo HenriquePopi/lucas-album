@@ -1,0 +1,93 @@
+@import "vars.scss";
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header {
+  background-color: transparent;
+  height: 110vh;
+  max-width: 68.75rem;
+  margin: 0 auto;
+  h1 {
+    @include bgClipText("../assets/yellow-bg.png");
+
+    width: 700px;
+    height: 700px;
+    background-color: black;
+    color: transparent;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 5rem;
+    margin: 0 auto;
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 260px;
+    }
+  }
+
+  .tracklist {
+    position: absolute;
+    top: 0;
+    right: 2%;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    li {
+      // @include bgClipText("../assets/yellow-bg.png");
+      font-size: 4rem;
+
+      font-weight: bold;
+      letter-spacing: 0.08rem;
+      // @include bgClipText("../assets/madeira1Grande.png");
+    }
+    // li::after {
+    // background-repeat: repeat;
+    // background-image: url("../assets/madeira1Grande.png");
+    // background:transparent ;
+    // background-clip: text;
+    // }
+  }
+
+  .albumCover.playng {
+    animation: rotate 3s linear infinite;
+  }
+  .music-link-box {
+    display: none;
+  }
+  .play-button {
+    width: 2.3rem;
+    height: 2.3rem;
+    padding: 0.5rem;
+    background-image: url("../assets/buttons/play.svg");
+    background-repeat: no-repeat;
+    font-size: 2rem;
+    display: block;
+    cursor: pointer;
+    border: none;
+  }
+  .play-button.playng {
+    background-image: url("../assets/buttons/pause.svg");
+  }
+
+  .buttons-menu {
+    display: flex;
+    width: 20rem;
+    height: 2rem;
+    margin-top: 3rem;
+    margin-left: 12rem;
+    li button {
+      width: 3rem;
+      height: 3rem;
+      list-style: none;
+      border: 2px solid black;
+    }
+  }
+}

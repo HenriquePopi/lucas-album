@@ -1,0 +1,25 @@
+@import "vars.scss";
+
+.section1 {
+  background-image: url(../assets/yellow-bg.png);
+  background-size: cover;
+  overflow: hidden;
+  .subtitulo {
+    grid-column: 1 / 6;
+    grid-row: 3;
+  }
+  .container {
+    grid-template-rows: repeat(12, 5rem);
+  }
+  .player {
+    grid-column: 1/6 !important ;
+    grid-row: -1;
+  }
+}
+
+.img1 {
+  grid-column: 6 / 12;
+  grid-row: 2 / 9;
+  background-image: url(../assets/telhados.jpg);
+  background-size: cover;
+}

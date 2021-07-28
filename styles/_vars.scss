@@ -1,0 +1,32 @@
+$primaryColor: #0000;
+$secondaryColor: #000;
+$textColor1: #000;
+$textColor2: #173c4e;
+$bgColor: #fff;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin myGrid {
+  display: grid;
+  max-width: 62.5rem;
+  grid-template-columns: repeat(12, 8.32%);
+  grid-template-rows: repeat(11, 1vh);
+  width: 110vh;
+  margin: 0 auto;
+}
+
+@mixin bgClipText($url) {
+  background-image: url($url);
+  background-size: 24px;
+  background: cover;
+  background-repeat: repeat;
+  // width: 200%;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  // color: rgba(0,0,0,1);
+
+}
